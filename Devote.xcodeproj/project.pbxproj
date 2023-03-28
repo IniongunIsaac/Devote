@@ -18,6 +18,9 @@
 		55AB88CA29D310F000B8CEDE /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55AB88C729D310F000B8CEDE /* sound-ding.mp3 */; };
 		55AB88D629D3300A00B8CEDE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB88D529D3300A00B8CEDE /* Constants.swift */; };
 		55AB88D829D373CB00B8CEDE /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB88D729D373CB00B8CEDE /* HideKeyboardExtension.swift */; };
+		55AB88DA29D38C6E00B8CEDE /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB88D929D38C6E00B8CEDE /* BackgroundImageView.swift */; };
+		55AB88DC29D38E6200B8CEDE /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB88DB29D38E6200B8CEDE /* NewTaskItemView.swift */; };
+		55AB88E029D3947C00B8CEDE /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB88DF29D3947C00B8CEDE /* BlankView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		55AB88D029D3140F00B8CEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		55AB88D529D3300A00B8CEDE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55AB88D729D373CB00B8CEDE /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
+		55AB88D929D38C6E00B8CEDE /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		55AB88DB29D38E6200B8CEDE /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
+		55AB88DF29D3947C00B8CEDE /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				55AB88B329D30E0C00B8CEDE /* ContentView.swift */,
+				55AB88D929D38C6E00B8CEDE /* BackgroundImageView.swift */,
+				55AB88DB29D38E6200B8CEDE /* NewTaskItemView.swift */,
+				55AB88DF29D3947C00B8CEDE /* BlankView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,11 +221,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55AB88D629D3300A00B8CEDE /* Constants.swift in Sources */,
+				55AB88DA29D38C6E00B8CEDE /* BackgroundImageView.swift in Sources */,
 				55AB88BB29D30E0D00B8CEDE /* Persistence.swift in Sources */,
 				55AB88D829D373CB00B8CEDE /* HideKeyboardExtension.swift in Sources */,
+				55AB88E029D3947C00B8CEDE /* BlankView.swift in Sources */,
 				55AB88B429D30E0C00B8CEDE /* ContentView.swift in Sources */,
 				55AB88BE29D30E0D00B8CEDE /* Devote.xcdatamodeld in Sources */,
 				55AB88B229D30E0C00B8CEDE /* DevoteApp.swift in Sources */,
+				55AB88DC29D38E6200B8CEDE /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
