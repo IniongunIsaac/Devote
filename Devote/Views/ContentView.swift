@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
     @State private var showNewTaskItem: Bool = false
     
@@ -27,6 +28,39 @@ struct ContentView: View {
                 //MARK: - Main View
                 VStack {
                     //MARK: - Header
+                    
+                    HStack(spacing: 10) {
+                        //Title
+                        Text("Devote")
+                            .font(.system(.largeTitle, design: .rounded))
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                        //EditButton
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 70, minHeight: 24)
+                            .background(
+                                Capsule().stroke(Color.white, lineWidth: 1)
+                            )
+                        
+                        //AppearanceButton
+                        Button {
+                            isDarkMode.toggle()
+                        } label: {
+                            Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .font(.system(.title, design: .rounded))
+                        }
+
+                        
+                    } //: HStack
+                    .padding()
+                    .foregroundColor(.white)
+                    
                     Spacer(minLength: 80)
                     
                     //MARK: - New Task Button
@@ -95,11 +129,7 @@ struct ContentView: View {
             }
             .navigationTitle("Daily Tasks")
             .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-            } //: Toolbar
+            .navigationBarHidden(true)
             .background(
                 BackgroundImageView()
             )
