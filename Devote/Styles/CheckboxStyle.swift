@@ -18,6 +18,8 @@ struct CheckboxStyle: ToggleStyle {
         }
         .onTapGesture {
             configuration.isOn.toggle()
+            feedback.notificationOccurred(.success)
+            playSound(sound: configuration.isOn ? "sound-rise" : "sound-tap", type: "mp3")
         }
     }
 }
