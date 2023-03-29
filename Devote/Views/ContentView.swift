@@ -33,7 +33,7 @@ struct ContentView: View {
                         //Title
                         Text("Devote")
                             .font(.system(.largeTitle, design: .rounded))
-                            .fontWeight(.bold)
+                            .fontWeight(.heavy)
                         
                         Spacer()
                         
@@ -88,19 +88,7 @@ struct ContentView: View {
                     
                     List {
                         ForEach(items) { item in
-                            NavigationLink {
-                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                            } label: {
-                                VStack(alignment: .leading) {
-                                    Text(item.task ?? "")
-                                        .font(.headline)
-                                        .fontWeight(.bold)
-                                    
-                                    Text(item.timestamp!, formatter: itemFormatter)
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                }
-                            }
+                            ListRowItemView(item: item)
                         }
                         .onDelete(perform: deleteItems)
                     } //: List
